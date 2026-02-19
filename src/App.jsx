@@ -8,7 +8,11 @@ import ForgotPasswordPage from "./components/Forgot-password";
 import ResetPasswordPage from "./components/Reset-password";
 import Main from './pages/professionalfeed/Main'
 import Hero from "./pages/Home/Hero";
-import Profile from './pages/Profile/Main'
+import Profile from './pages/Profile/Main';
+
+
+import Students from './pages/LandingPage/Students/Students';
+import Institutions from "./pages/LandingPage/Institutions/Institutions";
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
+
+        <Route path="/students" element={<Students/>} />
+        <Route path="/institutions" element={<Institutions/>} />
       </Routes>
     </BrowserRouter>
   );
