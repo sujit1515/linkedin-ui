@@ -35,8 +35,8 @@ export default function TrustedGiantsStrip() {
   }, []);
 
   return (
-    <section className="bg-[#080d1a] border-t border-white/8 py-12">
-      <p className="text-center text-xs font-bold tracking-[0.3em] text-blue-400/70 uppercase mb-8">
+    <section className="bg-white border-t border-gray-200 py-12">
+      <p className="text-center text-xs font-bold tracking-[0.3em] text-blue-600/80 uppercase mb-8">
         Trusted by Global Giants
       </p>
 
@@ -53,9 +53,9 @@ export default function TrustedGiantsStrip() {
           {doubled.map((name, i) => (
             <div
               key={i}
-              className="flex-shrink-0 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 hover:bg-white/8 transition-colors cursor-pointer"
+              className="flex-shrink-0 px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 hover:border-blue-500 hover:bg-gray-100 transition-colors cursor-pointer"
             >
-              <span className="text-gray-400 hover:text-gray-200 transition-colors text-sm font-bold tracking-wider">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-bold tracking-wider">
                 {name}
               </span>
             </div>

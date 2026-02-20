@@ -2,7 +2,7 @@ export default function HireVerifyCTAFooter() {
   return (
     <>
       {/* ── CTA Section ── */}
-      <section className="bg-[#080d1a] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-blue-600 rounded-2xl sm:rounded-3xl px-6 sm:px-16 py-14 sm:py-16 text-center overflow-hidden">
             {/* Decorative wave lines */}
@@ -18,7 +18,7 @@ export default function HireVerifyCTAFooter() {
             </svg>
 
             {/* Inner glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-40 bg-blue-500/30 blur-3xl rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-40 bg-blue-400/30 blur-3xl rounded-full pointer-events-none" />
 
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-10 tracking-tight">
@@ -41,37 +41,37 @@ export default function HireVerifyCTAFooter() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#050912] border-t border-white/8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* <footer className="bg-white border-t border-gray-200"> */}
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4"> */}
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <div className="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center">
                 <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
                   <path d="M12 2L3 7v10c0 5 9 9 9 9s9-4 9-9V7l-9-5z" />
                 </svg>
               </div>
-              <span className="font-black text-sm text-white tracking-tight">HireVerify</span>
-            </div>
+              <span className="font-black text-sm text-gray-900 tracking-tight">HireVerify</span>
+            </div> */}
 
             {/* Links */}
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               {["Privacy Policy", "Terms of Service", "Security", "Status"].map((link) => (
                 <a
                   key={link}
                   href="#"
-                  className="text-gray-500 hover:text-gray-300 text-xs transition-colors"
+                  className="text-gray-500 hover:text-gray-700 text-xs transition-colors"
                 >
                   {link}
                 </a>
               ))}
-            </div>
+            </div> */}
 
             {/* Copyright */}
-            <p className="text-gray-600 text-xs">© 2024 HireVerify India Pvt Ltd.</p>
-          </div>
-        </div>
-      </footer>
+            {/* <p className="text-gray-400 text-xs">© 2024 HireVerify India Pvt Ltd.</p> */}
+          {/* </div>
+        </div> */}
+      {/* </footer> */}
     </>
   );
 }

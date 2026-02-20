@@ -3,6 +3,7 @@ import Trustedgiantsstrip from "./Trustedgiantsstrip";
 import Hiringlifecyclesection from "./Hiringlifecyclesection";
 import Backgroundverificationsection from "./Backgroundverificationsection";
 import Hireverifyctafooter from "./Hireverifyctafooter";
+import Footerfull from "../Students/Footerfull";
 
 export default function HireVerifyApp() {
   return (
@@ -20,7 +21,8 @@ export default function HireVerifyApp() {
       <Backgroundverificationsection />
 
       {/* 5. CTA + Footer */}
-      <Hireverifyctafooter />
+      <Hireverifyctafooter />  
+      <Footerfull/>
     </div>
   );
 }

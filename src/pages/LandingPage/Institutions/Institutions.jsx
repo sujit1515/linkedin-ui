@@ -1,4 +1,5 @@
 
+import Footerfull from "../Students/Footerfull";
 import Campushero from "./Campushero";
 import Digitalcampussection from "./Digitalcampussection";
 import Digitaltransformcta from "./Digitaltransformcta";
@@ -13,6 +14,7 @@ export default function Recruiters() {
       <Digitalcampussection/>
       <Launcheducationsection/>
       <Digitaltransformcta/>
+      <Footerfull/>
     </>
   );
 }

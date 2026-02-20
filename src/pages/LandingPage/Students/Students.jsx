@@ -6,6 +6,7 @@ import Pricingsection from "./Pricingsection";
 import Appsection from "./Appsection";
 import Finalctasection from "./Finalctasection";
 import Footerfull from "./Footerfull";
+import Featuredin from "./Featuredin"
 // import Navbar from "./Students/Navbar"
 
 export default function Students() {
@@ -13,6 +14,7 @@ export default function Students() {
     <>
       {/* <Navbar/> */}
       <Heropage />
+      <Featuredin/>
       <Networksection />
       <Ctasection />
       <Pricingsection/>

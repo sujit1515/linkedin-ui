@@ -13,7 +13,8 @@ import {
   Users,
   Building2,
   Award
-} from "lucide-react";
+} from "lucide-react"; 
+import { Link } from 'react-router-dom';
 
 export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -306,12 +307,14 @@ export default function SignupPage() {
           </form>
 
           {/* Sign In Link */}
-          <p className="text-center text-sm text-gray-600 mt-6">
-            Already have an account?{" "}
-            <a href="/login" className="text-[#1565c0] font-medium hover:underline">
-              Sign in
-            </a>
-          </p>
+          
+
+<p className="text-center text-sm text-gray-600 mt-6">
+  Already have an account?{" "}
+  <Link to="/login" className="text-[#1565c0] font-medium hover:underline">
+    Sign in
+  </Link>
+</p>
 
           {/* Trust Badges */}
           <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-gray-100">

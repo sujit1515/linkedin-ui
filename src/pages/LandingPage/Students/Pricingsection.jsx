@@ -54,9 +54,9 @@ function CheckIcon({ available }) {
     );
   }
   return (
-    <div className="w-5 h-5 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#6B7280" strokeWidth="2.5" className="w-3 h-3">
-        <circle cx="12" cy="12" r="1" fill="#6B7280" />
+    <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2.5" className="w-3 h-3">
+        <circle cx="12" cy="12" r="1" fill="#9CA3AF" />
         <path d="M12 7v2M12 15v2" strokeLinecap="round" />
       </svg>
     </div>
@@ -65,14 +65,14 @@ function CheckIcon({ available }) {
 
 export default function PricingSection() {
   return (
-    <section className="bg-[#0a0f1e] text-white py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white text-gray-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             Choose Your Plan
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Invest in your future with flexible pricing options designed for every stage of
             your career journey in India.
           </p>
@@ -85,8 +85,8 @@ export default function PricingSection() {
               key={plan.name}
               className={`relative rounded-2xl p-6 sm:p-7 flex flex-col h-full transition-transform duration-200 hover:-translate-y-1 ${
                 plan.popular
-                  ? "bg-[#0d1528] border-2 border-blue-500 shadow-xl shadow-blue-500/20"
-                  : "bg-[#0d1528] border border-white/10"
+                  ? "bg-white border-2 border-blue-500 shadow-xl shadow-blue-500/10"
+                  : "bg-white border border-gray-200 shadow-sm hover:shadow-md"
               }`}
             >
               {/* Most Popular Badge */}
@@ -100,14 +100,14 @@ export default function PricingSection() {
 
               {/* Plan Name & Price */}
               <div className="mb-5 mt-2">
-                <h3 className="text-base font-bold text-white mb-3">{plan.name}</h3>
+                <h3 className="text-base font-bold text-gray-900 mb-3">{plan.name}</h3>
                 <div className="flex items-baseline gap-1 mb-3">
-                  <span className="text-4xl sm:text-5xl font-extrabold text-white">
+                  <span className="text-4xl sm:text-5xl font-extrabold text-gray-900">
                     ₹{plan.price}
                   </span>
-                  <span className="text-gray-400 text-sm font-medium">/mo</span>
+                  <span className="text-gray-500 text-sm font-medium">/mo</span>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">{plan.desc}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{plan.desc}</p>
               </div>
 
               {/* Features */}
@@ -117,7 +117,7 @@ export default function PricingSection() {
                     <CheckIcon available={f.available} />
                     <span
                       className={`text-sm font-medium ${
-                        f.available ? "text-white" : "text-gray-500"
+                        f.available ? "text-gray-900" : "text-gray-400"
                       }`}
                     >
                       {f.label}
@@ -130,8 +130,8 @@ export default function PricingSection() {
               <button
                 className={`w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${
                   plan.ctaStyle === "primary"
-                    ? "bg-blue-600 hover:bg-blue-500 text-white hover:shadow-lg hover:shadow-blue-500/30"
-                    : "bg-white/10 hover:bg-white/15 text-white border border-white/10"
+                    ? "bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg hover:shadow-blue-200"
+                    : "bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-200"
                 }`}
               >
                 {plan.cta}
