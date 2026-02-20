@@ -9,22 +9,24 @@ import {
   Briefcase,
   Users,
   Building2,
-  Award
+  Award,
 } from "lucide-react";
+
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    rememberMe: false
+    rememberMe: false,
   });
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -43,19 +45,21 @@ export default function LoginPage() {
           alt="Professional workspace"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        
+
         {/* Overlay with #1565c0 */}
         <div className="absolute inset-0 bg-[#1565c0] bg-opacity-70"></div>
-        
+
         {/* Gradient Overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1565c0] via-transparent to-black/20"></div>
-        
+
         {/* Content */}
         <div className="absolute inset-0 flex items-center">
           <div className="relative z-10 text-white px-8 md:px-12 lg:px-16 max-w-xl">
             {/* Welcome Back Message - Different from Signup */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium text-white">Welcome Back!</span>
+              <span className="text-sm font-medium text-white">
+                Welcome Back!
+              </span>
             </div>
 
             {/* Main Heading */}
@@ -67,21 +71,28 @@ export default function LoginPage() {
 
             {/* Description */}
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              Access your network, explore new opportunities, and connect with industry leaders who can help shape your career.
+              Access your network, explore new opportunities, and connect with
+              industry leaders who can help shape your career.
             </p>
 
             {/* Stats Grid - Same as Signup */}
             <div className="grid grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
               <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">1M+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  1M+
+                </div>
                 <div className="text-sm text-white/70">Active Users</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">500+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  500+
+                </div>
                 <div className="text-sm text-white/70">Companies</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">50k+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  50k+
+                </div>
                 <div className="text-sm text-white/70">Job Listings</div>
               </div>
             </div>
@@ -156,7 +167,9 @@ export default function LoginPage() {
               <svg className="w-5 h-5" fill="#0A66C2" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
-              <span className="text-sm font-medium">Continue with LinkedIn</span>
+              <span className="text-sm font-medium">
+                Continue with LinkedIn
+              </span>
             </button>
           </div>
 
@@ -176,7 +189,10 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1.5"
+              >
                 Work Email
               </label>
               <div className="relative group">
@@ -196,7 +212,10 @@ export default function LoginPage() {
 
             {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-1.5"
+              >
                 Password
               </label>
               <div className="relative group">
@@ -216,7 +235,11 @@ export default function LoginPage() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                 >
-                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                  {showPassword ? (
+                    <EyeOff className="w-5 h-5" />
+                  ) : (
+                    <Eye className="w-5 h-5" />
+                  )}
                 </button>
               </div>
             </div>
@@ -236,9 +259,13 @@ export default function LoginPage() {
                   Remember me
                 </label>
               </div>
-              <a href="/forgot-password" className="text-sm text-[#1565c0] hover:underline font-medium">
+
+              <Link
+                to="/forgot-password"
+                className="text-sm text-[#1565c0] hover:underline font-medium"
+              >
                 Forgot password?
-              </a>
+              </Link>
             </div>
 
             {/* Submit Button */}
@@ -252,11 +279,15 @@ export default function LoginPage() {
           </form>
 
           {/* Sign Up Link */}
+
           <p className="text-center text-sm text-gray-600 mt-6">
             Don't have an account?{" "}
-            <a href="/signup" className="text-[#1565c0] font-medium hover:underline">
+            <Link
+              to="/signup"
+              className="text-[#1565c0] font-medium hover:underline"
+            >
               create new account
-            </a>
+            </Link>
           </p>
 
           {/* Trust Badges - Same as Signup */}
@@ -277,9 +308,15 @@ export default function LoginPage() {
 
           {/* Mobile Footer Links */}
           <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-400 mt-6 lg:hidden">
-            <a href="#" className="hover:text-[#1565c0]">Privacy</a>
-            <a href="#" className="hover:text-[#1565c0]">Terms</a>
-            <a href="#" className="hover:text-[#1565c0]">Contact</a>
+            <a href="#" className="hover:text-[#1565c0]">
+              Privacy
+            </a>
+            <a href="#" className="hover:text-[#1565c0]">
+              Terms
+            </a>
+            <a href="#" className="hover:text-[#1565c0]">
+              Contact
+            </a>
             <span>© 2026</span>
           </div>
         </div>
