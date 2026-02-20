@@ -10,6 +10,7 @@ import {
   CheckCircle,
   AlertCircle
 } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -172,9 +173,12 @@ export default function ForgotPasswordPage() {
               {/* Back to Login */}
               <p className="text-center text-sm text-gray-600 mt-4">
                 Remember your password?{" "}
-                <a href="/login" className="text-[#1565c0] font-medium hover:underline">
-                  Sign in
-                </a>
+                <Link 
+  to="/login" 
+  className="text-[#1565c0] font-medium hover:underline"
+>
+  Sign in
+</Link>
               </p>
             </form>
           ) : (
