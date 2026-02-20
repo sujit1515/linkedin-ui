@@ -10,9 +10,11 @@ import Main from './pages/professionalfeed/Main'
 import Hero from "./pages/Home/Hero";
 import Profile from './pages/Profile/Main';
 
+//Landing Page
 
 import Students from './pages/LandingPage/Students/Students';
 import Institutions from "./pages/LandingPage/Institutions/Institutions";
+import Recruiters from "./pages/LandingPage/Recruiters/Recruiters";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <NavbarSimple />
 
       <Routes>
+        
         <Route path="/" element={<Hero />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -27,9 +30,13 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
+         
+        {/* Landing Page */}
 
         <Route path="/students" element={<Students/>} />
         <Route path="/institutions" element={<Institutions/>} />
+        <Route path="/recruiters" element={<Recruiters/>} />
+
       </Routes>
     </BrowserRouter>
   );
